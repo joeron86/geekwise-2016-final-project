@@ -1,4 +1,65 @@
-.wind {
-  background-color: blue;
-  height:200px;
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/*.fade-in {
+  position: center;
+  margin: auto;
+}
+.fade-in img {
+  position:absolute;
+  background-size: cover;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+#f1 {
+  -webkit-animation-delay: -6s;
+}
+#f2 {
+  -webkit-animation-delay: -4s;
+}
+#f3 {
+  -webkit-animation-delay: -2s;
+}
+*/
+
+#playlist,audio {
+  background: #666;
+  width: 400px;
+  padding: 20px;
+}
+
+.active a {
+  color: #5DB0E6;
+  text-decoration: none;
+}
+
+li a {
+  color: #eeeedd;
+  background: #333;
+  padding: 5px;display:block;}
+
+li a:hover {
+  text-decoration: none;
 }

@@ -1,34 +1,45 @@
-//figure out layout of page - shapes, keys = whatever is going to be clickable to play music
-//give shapes id's so they can be targeted
+// difine songs as array varibles
+// var songs ['a, b, c, d, e'];
 
-var html5_audiotypes={
-	"mp3": "audio/mpeg",
-	"mp4": "audio/mp4",
-	"ogg": "audio/ogg",
-	"wav": "audio/wav"
+//create a function will play songs on after eachother
+
+// create a function that will use a button to play next song or previous song
+
+var audio;
+var playlist;
+var tracks;
+var current;
+
+init();
+function init(){
+    current = 0;
+    audio = $('#audio');
+    playlist = $('#playlist');
+    tracks = playlist.find('li a');
+    len = tracks.length - 1;
+    audio[0].volume = .10;
+    audio[0].play();
+    playlist.find('a').click(function(e){
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+    });
+    audio[0].addEventListener('ended',function(e){
+        current++;
+        if(current == len){
+            current = 0;
+            link = playlist.find('a')[0];
+        }else{
+            link = playlist.find('a')[current];
+        }
+        run($(link),audio[0]);
+    });
 }
-
-function createsoundbite(sound){
-	var html5audio=document.createElement('audio')
-	if (html5audio.canPlayType){ //check support for HTML5 audio
-		for (var i=0; i<arguments.length; i++){
-			var sourceel=document.createElement('source')
-			sourceel.setAttribute('src', arguments[i])
-			if (arguments[i].match(/\.(\w+)$/i))
-				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
-			html5audio.appendChild(sourceel)
-		}
-		html5audio.load()
-		html5audio.playclip=function(){
-			html5audio.pause()
-			html5audio.currentTime=0
-			html5audio.play()
-		}
-		return html5audio
-	}
-	else{
-		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
-	}
+function run(link, player){
+        player.src = link.attr('href');
+        par = link.parent();
+        par.addClass('active').siblings().removeClass('active');
+        audio[0].load();
+        audio[0].play();
 }
-
-var clicksound=createsoundbite("")

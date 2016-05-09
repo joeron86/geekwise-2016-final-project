@@ -9,21 +9,43 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div id="sounds">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3 rain"></div>
-          <div class="col-sm-3 wind"></div>
-          <div class="col-sm-3 thunder"></div>
-          <div class="col-sm-3 crickets"></div>
-        </div>
+    <div class="header">
+      <div class="fade-in">
+        <img src="imgs/as_surf_sunset_burkard_2048-1.jpg" alt="" class="img-responsive center-block" id="f1">
+        <!-- <img src="img/halogen_mural.jpg" alt="" class= "img-responsive center-block" id="f2">
+        <img src="imgs/deliberation-mario-sanchez-nevado.jpg" alt="" class= "img-responsive center-block" id="f3">
+      -->
+      </div>
+      <audio id="audio" preload="auto" tabindex="0" controls="">
+        <source src="sounds/a_note.mp3" type="audio/mpeg">
+      </audio>
+      <ul id="playlist">
+        <li class="active">
+            <a href="sounds/a_note.mp3">
+                A Note
+            </a>
+        </li>
+        <li>
+            <a href="sounds/b_note.mp3">
+                Note B
+            </a>
+        </li>
+        <li>
+            <a href="sounds/c_note.mp3">
+                Note C
+            </a>
+        </li>
+        <li>
+            <a href="sounds/d_note.mp3">
+                Note D
+            </a>
+        </li>
+    </ul>
+    </div>
 
-      </div><!--END CONTAINER-->
-
-    </div><!--END OF SOUNDS-->
 
   </div><!--END OF CONTAINER-FLUID-->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>
