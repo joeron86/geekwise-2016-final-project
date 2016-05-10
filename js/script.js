@@ -5,7 +5,7 @@
 
 // create a function that will use a button to play next song or previous song
 
-var audio;
+/*var audio;
 var playlist;
 var tracks;
 var current;
@@ -43,3 +43,22 @@ function run(link, player){
         audio[0].load();
         audio[0].play();
 }
+*/
+
+var play = document.querySelector("#play");
+var audio = document.querySelector("#audio");
+var songTwo = document.querySelector("#SongSource");
+
+function donePlaying() {
+  alert("Play Next Song!");
+  document.getElementById('SongSource').src = 'sounds/Another_story.m4a';
+  audio.play();
+}
+
+play.addEventListener('click', function() {
+  audio.play();
+});
+
+audio.addEventListener('ended', function() {
+  donePlaying();
+});
