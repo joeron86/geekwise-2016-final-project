@@ -1,21 +1,24 @@
 .container-fluid {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-left: 0;
 }
 
-/*.fade-in {
+.fade-in {
   position: center;
+  top: 0px;
   margin: auto;
 }
 .fade-in img {
   position:absolute;
+  width: 100%;
   background-size: cover;
   -webkit-animation-name: fade;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
+  -webkit-animation-duration: 60s;
   animation-name: fade;
   animation-iteration-count: infinite;
-  animation-duration: 6s;
+  animation-duration: 60s;
 }
 
 @-webkit-keyframes fade {
@@ -34,15 +37,14 @@
 }
 
 #f1 {
-  -webkit-animation-delay: -6s;
+  -webkit-animation-delay: -40s;
 }
 #f2 {
-  -webkit-animation-delay: -4s;
+  -webkit-animation-delay: -30s;
 }
 #f3 {
-  -webkit-animation-delay: -2s;
+  -webkit-animation-delay: -20s;
 }
-*/
 
 #playlist,audio {
   background: #666;
