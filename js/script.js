@@ -4,7 +4,7 @@ var songTwo = document.querySelector("#SongSource");
 
 function donePlaying() {
   alert("Play Next Song!");
-  audio.src = 'sounds/Another_story.m4a';// At the end of the first song it atomaticly plays this next song
+  audio.src = 'music/Another_story.m4a';// At the end of the first song it atomaticly plays this next song
   audio.play();
 }
 
