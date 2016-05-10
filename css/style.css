@@ -3,6 +3,12 @@
     padding-left: 0px !important;
     padding-left: 0;
 }
+.header {
+  background-image: url('../imgs/Snowy.jpg');
+  background-size: cover;
+  width: 100%;
+  min-height: 720px;
+}
 
 .fade-in {
   position: center;
