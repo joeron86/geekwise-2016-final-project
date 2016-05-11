@@ -1,20 +1,27 @@
 var play = document.querySelector("#play");
 var audio = document.querySelector("#audio");
-var songTwo = document.querySelector("#SongSource");
 
-function donePlaying() {
-  alert("Play Next Song!");
-  audio.src = 'music/Another_story.m4a';// At the end of the first song it atomaticly plays this next song
+
+
+//put all songs in array to loop through
+var playlist = [
+  'music/Another_story.m4a',
+  'music/Id_Be_Waiting.mp3',
+  'music/Innerbloom.m4a',
+  'music/Show_Me_Love.m4a',
+  'music/Waiting_Too_Long.mp3'
+];
+
+//set incrementor to 0
+var i = 0;
+
+//var i will increment and choose the next item in the array
+audio.addEventListener('ended', function () {
+  i = ++i < playlist.length ? i : 0;
+  audio.src = playlist[i];
   audio.play();
-}
+}, true);
 
 play.addEventListener('click', function() {
   audio.play();
 });
-
-audio.addEventListener('ended', function() {
-  donePlaying();
-});
-
-// Need to figure out how to wirte the rest of the song into an Array so they play one after the other.
-// Then loop it back to the first song.
