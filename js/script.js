@@ -5,11 +5,11 @@ var audio = document.querySelector("#audio");
 
 //put all songs in array to loop through
 var playlist = [
-  'music/Another_story.m4a',
+  'music/Waiting_Too_Long.mp3',
   'music/Id_Be_Waiting.mp3',
   'music/Innerbloom.m4a',
   'music/Show_Me_Love.m4a',
-  'music/Waiting_Too_Long.mp3'
+  'music/Another_Story.m4a'
 ];
 
 //set incrementor to 0
